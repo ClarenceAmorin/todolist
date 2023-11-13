@@ -18,7 +18,7 @@ class TodoItemAdapter extends TypeAdapter<TodoItem> {
     };
     return TodoItem(
       fields[0] as String,
-      isCompleted: fields[1] as bool,
+      fields[1] == null ? false : fields[1] as bool,
     );
   }
 
